@@ -7,8 +7,6 @@
 ### Environment variables and startup programs
 # Set UTF-8 as the terminal encoding
 export LANG=en_US.UTF-8
-# Set TERM (indicates 256-color support)
-export TERM=rxvt-unicode-256color
 # Set LS_COLORS (determines ls colors, dircolors is part of GNU coreutils)
 if [ -f $HOME/.dircolors ]; then
 	eval `dircolors -b $HOME/.dircolors`
