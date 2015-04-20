@@ -2,11 +2,13 @@
 # ~/.bashrc
 #
 
+### Global settings
 # If not running interactively, don't do anything
+# (prevents .bashrc configurations from breaking non-interactive scripts)
 [[ $- != *i* ]] && return
 
 ### Prompt settings
-# Arch linux default prompt (w/ absolute path)
+# Use arch linux default prompt with absolute path (normal user)
 export PS1="[\u@\h \w]\$ "
 
 ### Aliases
@@ -14,7 +16,7 @@ export PS1="[\u@\h \w]\$ "
 alias ls='ls -h --color'
 
 ### VIM settings
-# use vi-like commands in the bash shell
+# Use vi-like commands in the bash shell
 set -o vi
 # Disable flow control when using VIM
 vim()

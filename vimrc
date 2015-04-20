@@ -1,6 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  VIM Run Commands                                "
-"                                                                                  "
+"                                      ~/.vimrc                                    "
 "                          1) Plugins and plugin configuration                     "
 "                          2) Global settings                                      "
 "                          3) Search settings                                      "
@@ -8,7 +8,6 @@
 "                          5) Custom mappings                                      "
 "                          6) Functions                                            "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Author: Mariano Macchi
 
 " 1) Plugins and plugin configuration "
@@ -36,16 +35,16 @@ set mouse=a
 set laststatus=2
 " Show commands as they are being written
 set showcmd
-" Show possible matches when invoking completion in the command line
+" Show possible matches when invoking tab completion in the command line
 set wildmenu
 " Min lines above and below the cursor
 set scrolloff=3
-" Allow buffer switching without saving
-set hidden
 " Use strings to represent special characters (list must be set)
 set listchars=tab:>-
 " Set timeouts (prevents terminal key codes from interfering w/ normal use)
 set timeout timeoutlen=3000 ttimeoutlen=100
+" Allow buffer switching without saving
+set hidden
 " Automatically reload vimrc when it's saved
 autocmd BufWritePost .vimrc source ~/.vimrc
 
@@ -57,16 +56,14 @@ set incsearch
 set hlsearch
 " Highlight matching brackets
 set showmatch
-" Ignore case while searching
-set ignorecase
-" Don't ignore case if Uppercase char in search
+" Default search is case insensitive, becomes sensitive if capitals are used
 set smartcase
 
 " 4) Programming Settings "
 """""""""""""""""""""""""""
 " Numbered lines
 set nu
-" Basic autoindentation (copies indentation from previous line)
+" Basic auto indentation (copies indentation from previous line)
 set autoindent
 " Custom color scheme
 colorscheme jellybeans
@@ -84,9 +81,9 @@ nnoremap <silent> <F8> :call ToggleColumnColor()<CR>
 match Whitespace /\s\+$/
 autocmd WinEnter * match Whitespace /\s\+$/
 
-" 5) Custom mappings "
+" 5) Custom map       k pings "
 """"""""""""""""""""""
-" Set custom <Leader>
+" Set <Leader>
 let mapleader = ','
 " Open .vimrc in a new tab
 nnoremap <Leader>v :tabe $HOME/.vimrc<CR>
@@ -97,8 +94,6 @@ inoremap <Leader>k <Up>
 inoremap <Leader>l <Right>
 " Insert a space (normal mode)
 nnoremap <Space> a<Space><Esc>
-" Insert spaces equivalent to a tab (insert mode, width = 8)
-inoremap <Leader><Leader> <C-O>8a<Space><Esc>i
 " Begin a new line below or above the cursor (normal mode)
 nnoremap <CR> o<Esc>
 nnoremap <Leader><CR> O<Esc>
