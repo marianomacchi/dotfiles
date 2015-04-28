@@ -45,8 +45,18 @@ set listchars=tab:>-
 set timeout timeoutlen=3000 ttimeoutlen=100
 " Allow buffer switching without saving
 set hidden
-" Automatically reload vimrc when it's saved
-autocmd BufWritePost .vimrc source ~/.vimrc
+" Set how many columns a tab counts for
+set tabstop=8
+" Set how many colmuns are inserted when pressing tab (insert mode)
+set softtabstop=4
+" Set how many columns a text is indented when using << and >>
+set shiftwidth=4
+" Expand tabs to spaces
+set expandtab
+" Detect the type of file being edited (Triggers the FileType event)
+filetype on
+" Automatically reload vimrc when it's saved (See :h $MYVIMRC)
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 " 3) Search Settings "
 """"""""""""""""""""""
@@ -63,26 +73,26 @@ set smartcase
 """""""""""""""""""""""""""
 " Numbered lines
 set nu
-" Basic auto indentation (copies indentation from previous line)
-set autoindent
-" Custom color scheme
-colorscheme jellybeans
 " Set syntax highlighting
 syntax on
+" Custom color scheme
+colorscheme jellybeans
+" Basic auto indentation (copies indentation from previous line)
+set autoindent
+" Indentation settings for the linux kernel coding style
+autocmd FileType c set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 " Highlight group for columns
 highlight ColorColumn ctermbg=black
 " Highlight group for whitespace
 highlight Whitespace ctermbg=DarkGrey
-" Make a background for the first 80 columns using colorcolumn
-"let &colorcolumn=join(range(1,80), ',')
-" Highlight limit column (80)
-nnoremap <silent> <F8> :call ToggleColumnColor()<CR>
 " Highlight trailing whitespace in current and new windows
 match Whitespace /\s\+$/
 autocmd WinEnter * match Whitespace /\s\+$/
 
-" 5) Custom map       k pings "
+" 5) Custom mappings "
 """"""""""""""""""""""
+" Highlight limit column for code width (80)
+nnoremap <silent> <F8> :call ToggleColumnColor()<CR>
 " Set <Leader>
 let mapleader = ','
 " Open .vimrc in a new tab
