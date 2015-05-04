@@ -6,6 +6,8 @@
 # If not running interactively, don't do anything
 # (prevents .bashrc configurations from breaking non-interactive scripts)
 [[ $- != *i* ]] && return
+# Use arch linux default prompt with absolute path (normal user)
+export PS1="[\u@\h \w]\$ "
 
 ### Aliases
 # Set ls human readable and autocolor as default
