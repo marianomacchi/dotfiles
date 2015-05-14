@@ -12,18 +12,20 @@
 
 " 1) Plugins and plugin configuration "
 """""""""""""""""""""""""""""""""""""""
-" Call vim-plug (plugin manager)
+" Call vim-plug (plugin manager, must be installed)
 call plug#begin('~/.vim/plugged')
-" Add surround commands (ys, cs, ds)
+" Adds surround commands (ys, cs, ds)
 Plug 'tpope/vim-surround'
-" Enable '.' repeating support for plugins (supported plugins only)
+" Enables '.' repeating support for plugins (supported plugins only)
 Plug 'tpope/vim-repeat'
-" Fuzzy finder (files, buffers, tags, etc)
+" Adds a fuzzy finder (for files, buffers, tags, etc)
 Plug 'kien/ctrlp.vim'
-" Colorful Status/tabline
+" Adds a colorful and informative status/tabline
 Plug 'bling/vim-airline'
-" Show open buffers in status line
+" Shows open buffers in status line
 Plug 'bling/vim-bufferline'
+" Adds a git wrapper
+Plug 'tpope/vim-fugitive'
 " End vim-plug call
 call plug#end()
 
