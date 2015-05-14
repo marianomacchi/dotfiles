@@ -22,12 +22,14 @@ Plug 'tpope/vim-repeat'
 Plug 'kien/ctrlp.vim'
 " Adds a colorful and informative status/tabline
 Plug 'bling/vim-airline'
-" Shows open buffers in status line
+" Shows open buffers in status line and command line
 Plug 'bling/vim-bufferline'
 " Adds a git wrapper
 Plug 'tpope/vim-fugitive'
 " End vim-plug call
 call plug#end()
+" Print current open buffers in the status line only
+let g:bufferline_echo=0
 
 " 2) Global settings "
 """"""""""""""""""""""
