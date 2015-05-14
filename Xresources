@@ -5,10 +5,10 @@
 !!! Urxvt settings
 ! Set terminal type name (sets the TERM environment var)
 URxvt*termName: rxvt-unicode-256color
-! Set fonts
-URxvt*font: xft:Source Code Pro:pixelsize=11.3:style=regular
+! Set fonts w/ powerline symbols
+URxvt*font: xft:Sauce Code Powerline:pixelsize=11.3:style=regular
 ! Set Background and foreground (font) color
 URxvt.background : black
 URxvt.foreground : white
-! Disable scrollbar (true is default)
+! Disable scrollbar (default is true)
 URxvt*scrollBar: false

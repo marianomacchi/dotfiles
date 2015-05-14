@@ -28,6 +28,8 @@ Plug 'bling/vim-bufferline'
 Plug 'tpope/vim-fugitive'
 " End vim-plug call
 call plug#end()
+" Enable powerline symbols (a font w/ powerline symbols must be in use)
+let g:airline_powerline_fonts=1
 " Print current open buffers in the status line only
 let g:bufferline_echo=0
 
