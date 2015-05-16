@@ -1,13 +1,13 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                  VIM Run Commands                                "
-"                                      ~/.vimrc                                    "
-"                          1) Plugins and plugin configuration                     "
-"                          2) Global settings                                      "
-"                          3) Search settings                                      "
-"                          4) Programming settings                                 "
-"                          5) Custom mappings                                      "
-"                          6) Functions                                            "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               VIM Run Commands                              "
+"                                   ~/.vimrc                                  "
+"                     1) Plugins and plugin configuration                     "
+"                     2) Global settings                                      "
+"                     3) Search settings                                      "
+"                     4) Programming settings                                 "
+"                     5) Custom mappings                                      "
+"                     6) Functions                                            "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Author: Mariano Macchi
 
 " 1) Plugins and plugin configuration "
@@ -62,12 +62,12 @@ set expandtab
 " Detect the type of file being edited (Triggers the FileType event)
 filetype on
 " Automatically reload vimrc when it's saved (See :h $MYVIMRC)
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
+autocmd BufWritePost % source $MYVIMRC
 
 " 3) Search Settings "
 """"""""""""""""""""""
 " Incremental search (start matching when the search pattern is being defined)
-set incsearch
+                                set incsearch
 " Highlight all matches
 set hlsearch
 " Highlight matching brackets
@@ -101,8 +101,11 @@ autocmd WinEnter * match Whitespace /\s\+$/
 nnoremap <silent> <F8> :call ToggleColumnColor()<CR>
 " Set <Leader>
 let mapleader = ','
+
 " Open .vimrc in a new tab
 nnoremap <Leader>v :tabe $HOME/.vimrc<CR>
+" Sort alphabetically (visual mode)
+vnoremap <Leader>s :sort<CR>
 " Allow _small_ hjkl movements while editing (insert mode)
 inoremap <Leader>h <Left>
 inoremap <Leader>j <Down>
