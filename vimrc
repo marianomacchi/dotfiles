@@ -61,13 +61,11 @@ set shiftwidth=4
 set expandtab
 " Detect the type of file being edited (Triggers the FileType event)
 filetype on
-" Automatically reload vimrc when it's saved (See :h $MYVIMRC)
-autocmd BufWritePost % source $MYVIMRC
 
 " 3) Search Settings "
 """"""""""""""""""""""
 " Incremental search (start matching when the search pattern is being defined)
-                                set incsearch
+set incsearch
 " Highlight all matches
 set hlsearch
 " Highlight matching brackets
@@ -99,9 +97,10 @@ autocmd WinEnter * match Whitespace /\s\+$/
 """"""""""""""""""""""
 " Highlight limit column for code width (80)
 nnoremap <silent> <F8> :call ToggleColumnColor()<CR>
+" Toggle between relative and absolute line numbers
+nnoremap <silent> <C-N> :call ToggleRelativeNumber()<CR>
 " Set <Leader>
 let mapleader = ','
-
 " Open .vimrc in a new tab
 nnoremap <Leader>v :tabe $HOME/.vimrc<CR>
 " Sort alphabetically (visual mode)
@@ -148,9 +147,17 @@ inoremap <Leader>" "<ESC>a
 """"""""""""""""
 " Toggle ColorColumn Highlight
 function! ToggleColumnColor()
-        if &colorcolumn==0
-                set colorcolumn=80
-        else
-                set colorcolumn=0
-        endif
+    if &colorcolumn==0
+        set colorcolumn=80
+    else
+        set colorcolumn=0
+    endif
+endfunction
+" Toggle relativenumber
+function! ToggleRelativeNumber()
+    if &relativenumber==0
+        set relativenumber
+    else
+        set norelativenumber
+    endif
 endfunction
