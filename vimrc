@@ -55,12 +55,12 @@ set hidden
 set tabstop=8
 " Set how many colmuns are inserted when pressing tab (insert mode)
 set softtabstop=4
-" Set how many columns a text is indented when using << and >>
+" Set how many columns a text is indented when using shitfs (<< and >>)
 set shiftwidth=4
 " Expand tabs to spaces
 set expandtab
-" Detect the type of file being edited (Triggers the FileType event)
-filetype on
+" Detect filetype and use its indenting rules (Triggers the FileType event)
+filetype indent on
 
 " 3) Search Settings "
 """"""""""""""""""""""
@@ -83,8 +83,6 @@ syntax on
 colorscheme jellybeans
 " Basic auto indentation (copies indentation from previous line)
 set autoindent
-" Indentation settings for the linux kernel coding style
-autocmd FileType c set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 " Highlight group for columns
 highlight ColorColumn ctermbg=black
 " Highlight group for whitespace
@@ -92,6 +90,12 @@ highlight Whitespace ctermbg=DarkGrey
 " Highlight trailing whitespace in current and new windows
 match Whitespace /\s\+$/
 autocmd WinEnter * match Whitespace /\s\+$/
+" Indentation settings for C (linux kernel coding style)
+autocmd FileType c set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
+" Indentation settings for python
+autocmd Filetype py set tabstop-8 softtabstop=4 shiftwidth=4 expandtab
+" Indentation settings for bash
+autocmd FileType sh set tabstop=8 softtabstop=2 shiftwidth=2 expandtab
 
 " 5) Custom mappings "
 """"""""""""""""""""""
