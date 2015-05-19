@@ -12,6 +12,8 @@ export PS1="[\u@\h \w]\$ "
 ### Aliases
 # Set ls human readable and autocolor as default
 alias ls='ls -h --color'
+# Use ls with the long format
+alias ll='ls -l'
 
 ### VIM settings
 # Use vi-like commands in the bash shell
