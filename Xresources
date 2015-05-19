@@ -5,10 +5,14 @@
 !!! Urxvt settings
 ! Set terminal type name (sets the TERM environment var)
 URxvt*termName: rxvt-unicode-256color
+! Disable scrollbar (default is true)
+URxvt*scrollBar: false
 ! Set fonts w/ powerline symbols
 URxvt*font: xft:Sauce Code Powerline:pixelsize=11.3:style=regular
 ! Set Background and foreground (font) color
-URxvt.background : black
-URxvt.foreground : white
-! Disable scrollbar (default is true)
-URxvt*scrollBar: false
+URxvt.background: black
+URxvt.foreground: white
+! Colored man pages (IT=italic, BD=bold, UL=underline)
+URxvt.colorIT: #C3EEED
+URxvt.colorBD: #3C72B3
+URxvt.colorUL: #68C5DF
