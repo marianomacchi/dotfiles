@@ -22,7 +22,7 @@ Plug 'tpope/vim-repeat'
 Plug 'kien/ctrlp.vim'
 " Adds a colorful and informative status/tabline
 Plug 'bling/vim-airline'
-" Shows open buffers in status line and command line
+" Shows open buffers in the status line and in the command line
 Plug 'bling/vim-bufferline'
 " Adds a git wrapper
 Plug 'tpope/vim-fugitive'
@@ -59,7 +59,7 @@ set softtabstop=4
 set shiftwidth=4
 " Expand tabs to spaces
 set expandtab
-" Detect filetype and use its indenting rules (Triggers the FileType event)
+" Detect filetype and use its indenting rules (triggers the FileType event)
 filetype indent on
 
 " 3) Search Settings "
@@ -92,8 +92,8 @@ match Whitespace /\s\+$/
 autocmd WinEnter * match Whitespace /\s\+$/
 " Indentation settings for C (linux kernel coding style)
 autocmd FileType c set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
-" Indentation settings for python
-autocmd Filetype py set tabstop-8 softtabstop=4 shiftwidth=4 expandtab
+" Indentation settings for python (PEP 8)
+autocmd Filetype py set tabstop=8 softtabstop=4 shiftwidth=4 expandtab
 " Indentation settings for bash
 autocmd FileType sh set tabstop=8 softtabstop=2 shiftwidth=2 expandtab
 
@@ -105,8 +105,8 @@ nnoremap <silent> <F8> :call ToggleColumnColor()<CR>
 nnoremap <silent> <C-N> :call ToggleRelativeNumber()<CR>
 " Set <Leader>
 let mapleader = ','
-" Open .vimrc in a new tab
-nnoremap <Leader>v :tabe $HOME/.vimrc<CR>
+" Open .vimrc in a new tab (see :h $MYVIMRC)
+nnoremap <Leader>v :tabe $MYVIMRC<CR>
 " Sort alphabetically (visual mode)
 vnoremap <Leader>s :sort<CR>
 " Allow _small_ hjkl movements while editing (insert mode)
