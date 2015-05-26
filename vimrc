@@ -125,7 +125,7 @@ vnoremap <C-C> "+y
 nnoremap <Leader>p "+gp
 vnoremap <Leader>p "+gp
 " Remove trailing whitespace
-nnoremap <silent> <C-Z> :%s/\s\+$//<CR>
+nnoremap <silent> <C-Z> :call RemoveTrailingWhitespace()<CR>
 " Remove search highlightning
 nnoremap <silent> <BS> :nohlsearch<CR>
 " List buffers with quick selection available
@@ -164,4 +164,16 @@ function! ToggleRelativeNumber()
     else
         set norelativenumber
     endif
+endfunction
+" Remove trailing whitespace (keeps state)
+function! RemoveTrailingWhitespace()
+    " Save current search string, line and column
+    let last_search = @/
+    let current_line = line('.')
+    let current_column = col('.')
+    " remove whitespace
+    :%s/\s\+$//e
+    " restore search string and cursor position
+    let @/ = last_search
+    call cursor(current_line, current_column)
 endfunction
