@@ -70,7 +70,9 @@ set incsearch
 set hlsearch
 " Highlight matching brackets
 set showmatch
-" Default search is case insensitive, becomes sensitive if capitals are used
+" Ignore case in search patterns
+set ignorecase
+" Make search case sensitive if capitals are used in the search string
 set smartcase
 
 " 4) Programming Settings "
