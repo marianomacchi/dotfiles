@@ -136,7 +136,7 @@ nnoremap <Leader>b :ls<CR>:b<Space>
 nnoremap <Left> :bp<CR>
 nnoremap <Right> :bn<CR>
 " Switch to previous buffer (last one edited)
-nnoremap <Tab> :b#<CR>
+nnoremap <Leader><Leader> :b#<CR>
 " Quicksave (normal and insert mode, terminal flow control must be disabled)
 nnoremap <C-S> :w<CR>
 inoremap <C-S> <Esc>:w<CR>
