@@ -47,8 +47,10 @@ set wildmenu
 set scrolloff=3
 " Use strings to represent special characters (list must be set)
 set listchars=tab:>-
-" Add dictionary completion to i_CTRL_P and i_CTRL_N whenever spell is set
+" Add dictionary completion whenever spell is set
 set complete+=kspell
+" Prioritise the longest match when using completion
+set completeopt+=longest
 " Set timeouts (prevents terminal key codes from interfering with normal use)
 set timeout timeoutlen=3000 ttimeoutlen=100
 " Allow buffer switching without saving
