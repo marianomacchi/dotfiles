@@ -47,15 +47,17 @@ set wildmenu
 set scrolloff=3
 " Use strings to represent special characters (list must be set)
 set listchars=tab:>-
-" Set timeouts (prevents terminal key codes from interfering w/ normal use)
+" Add dictionary completion to i_CTRL_P and i_CTRL_N whenever spell is set
+set complete+=kspell
+" Set timeouts (prevents terminal key codes from interfering with normal use)
 set timeout timeoutlen=3000 ttimeoutlen=100
 " Allow buffer switching without saving
 set hidden
 " Set how many columns a tab counts for
 set tabstop=8
-" Set how many colmuns are inserted when pressing tab (insert mode)
+" Set how many columns are inserted when pressing tab (insert mode)
 set softtabstop=4
-" Set how many columns a text is indented when using shitfs (<< and >>)
+" Set how many columns a text is indented when using shifts (<< and >>)
 set shiftwidth=4
 " Expand tabs to spaces
 set expandtab
@@ -128,7 +130,7 @@ nnoremap <Leader>p "+gp
 vnoremap <Leader>p "+gp
 " Remove trailing whitespace
 nnoremap <silent> <C-Z> :call RemoveTrailingWhitespace()<CR>
-" Remove search highlightning
+" Remove search highlighting
 nnoremap <silent> <BS> :nohlsearch<CR>
 " List buffers with quick selection available
 nnoremap <Leader>b :ls<CR>:b<Space>
