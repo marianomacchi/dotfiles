@@ -18,20 +18,24 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
 " Enables '.' repeating support for plugins (supported plugins only)
 Plug 'tpope/vim-repeat'
-" Adds a fuzzy finder (for files, buffers, tags, etc)
-Plug 'kien/ctrlp.vim'
 " Adds a colorful and informative status/tabline
 Plug 'bling/vim-airline'
 " Shows open buffers in the status line and in the command line
 Plug 'bling/vim-bufferline'
 " Adds a git wrapper
 Plug 'tpope/vim-fugitive'
+" Adds a fuzzy finder (for files, buffers, tags, etc)
+Plug 'kien/ctrlp.vim'
+" Adds rainbow parentheses to lisp
+Plug 'luochen1990/rainbow'
 " End vim-plug call
 call plug#end()
 " Enable powerline symbols (a font w/ powerline symbols must be in use)
 let g:airline_powerline_fonts=1
 " Print current open buffers in the status line only
 let g:bufferline_echo=0
+" Enable rainbow parentheses (lisp)
+let g:rainbow_active=1
 
 " 2) Global settings "
 """"""""""""""""""""""
