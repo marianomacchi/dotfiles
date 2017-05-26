@@ -26,16 +26,12 @@ Plug 'bling/vim-bufferline'
 Plug 'tpope/vim-fugitive'
 " Adds a fuzzy finder (for files, buffers, tags, etc)
 Plug 'kien/ctrlp.vim'
-" Adds rainbow parentheses to lisp
-Plug 'luochen1990/rainbow'
 " End vim-plug call
 call plug#end()
 " Enable powerline symbols (a font w/ powerline symbols must be in use)
 let g:airline_powerline_fonts=1
 " Print current open buffers in the status line only
 let g:bufferline_echo=0
-" Enable rainbow parentheses (lisp)
-let g:rainbow_active=1
 
 " 2) Global settings "
 """"""""""""""""""""""
@@ -114,16 +110,16 @@ nnoremap <silent> <F8> :call ToggleColumnColor()<CR>
 " Toggle between relative and absolute line numbers
 nnoremap <silent> <C-N> :call ToggleRelativeNumber()<CR>
 " Set <Leader>
-let mapleader = ','
+let mapleader = '\'
 " Open .vimrc in a new tab (see :h $MYVIMRC)
 nnoremap <Leader>v :tabe $MYVIMRC<CR>
 " Sort alphabetically (visual mode)
 vnoremap <Leader>s :sort<CR>
-" Allow _small_ hjkl movements while editing (insert mode)
-inoremap <Leader>h <Left>
+" Allow one character movement while editing (insert mode)
+inoremap <C-b> <Left>
 inoremap <Leader>j <Down>
 inoremap <Leader>k <Up>
-inoremap <Leader>l <Right>
+inoremap <C-f> <Right>
 " Insert a space (normal mode)
 nnoremap <Space> a<Space><Esc>
 " Begin a new line below or above the cursor (normal mode)
