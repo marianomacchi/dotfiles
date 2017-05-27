@@ -98,6 +98,8 @@ match Whitespace /\s\+$/
 autocmd WinEnter * match Whitespace /\s\+$/
 " Indentation settings for C (linux kernel coding style)
 autocmd FileType c set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
+" Indentation settings for Android
+autocmd FileType java set tabstop=8 softtabstop=4 shiftwidth=4 expandtab
 " Indentation settings for python (PEP 8)
 autocmd Filetype py set tabstop=8 softtabstop=4 shiftwidth=4 expandtab
 " Indentation settings for bash
