@@ -12,12 +12,13 @@
 
 " 1) Plugins and plugin configuration "
 """""""""""""""""""""""""""""""""""""""
-" Install vim-plug automatically, and call it to install the selected plugins
+" Install vim-plug automatically (only if needed)
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+" Set up vim-plug call
 call plug#begin('~/.vim/plugged')
 " Adds a custom colorscheme
 Plug 'nanotech/jellybeans.vim'
