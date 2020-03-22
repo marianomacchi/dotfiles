@@ -14,6 +14,8 @@
 """""""""""""""""""""""""""""""""""""""
 " Call vim-plug (plugin manager, must be installed)
 call plug#begin('~/.vim/plugged')
+" Adds a custom colorscheme
+Plug 'nanotech/jellybeans.vim'
 " Adds surround commands (ys, cs, ds)
 Plug 'tpope/vim-surround'
 " Enables '.' repeating support for plugins (supported plugins only)
