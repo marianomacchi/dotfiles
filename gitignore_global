@@ -1,5 +1,5 @@
 #
-# "Global" gitignore file for all repositories
+# ~/.gitignore_global
 #
 # Emacs
 *~
