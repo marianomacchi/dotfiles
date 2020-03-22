@@ -1,0 +1,8 @@
+#
+# "Global" gitignore file for all repositories
+#
+# Emacs
+*~
+\#*\#
+# VIM
+.*.swp
