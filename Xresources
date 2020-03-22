@@ -7,8 +7,8 @@
 URxvt*termName: rxvt-unicode-256color
 ! Disable scrollbar (default is true)
 URxvt*scrollBar: false
-! Set fonts w/ powerline symbols
-URxvt*font: xft:Sauce Code Powerline:pixelsize=13.3:style=regular
+! Set custom fonts
+URxvt*font: xft:Hack:pixelsize=13.3
 ! Set Background and foreground (font) color
 URxvt.background: black
 URxvt.foreground: white
@@ -19,4 +19,4 @@ URxvt.colorUL: #68C5DF
 
 !!! Emacs settings
 ! Font settings
-Emacs.font: Source Code Pro
+Emacs.font: Hack
