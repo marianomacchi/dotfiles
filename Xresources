@@ -4,6 +4,7 @@
 
 !!! Urxvt settings
 ! Set terminal type name (sets the TERM environment var)
+! Note: The selected terminal should be installed, to avoid misleadings
 URxvt*termName: rxvt-unicode-256color
 ! Disable scrollbar (default is true)
 URxvt*scrollBar: false
