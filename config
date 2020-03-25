@@ -175,6 +175,6 @@ bar {
 }
 
 # Set custom wallpaper
-exec --no-startup-id feh --bg-center /home/mariano/Pictures/wallpaper.png
+exec --no-startup-id feh --bg-fill /home/mariano/Pictures/wallpaper.png
 # Configure external monitor (if present)
 exec --no-startup-id /home/mariano/external_monitor_setup.sh
